@@ -1,17 +1,19 @@
+import pages from "../controllers/index"
+
+const root = document.getElementById('root');
+
 const router = ({hash: route, params}) => {
+  root.innerHTML = "";
   switch ( route ) {
-    case '#/': 
-      console.log('Home page');
-      break;
+    case '#/': {
+      return root.appendChild(pages.home())
+    }
     case '#/tienda': 
-      console.log('Products page');
-      break;
-      case '#/carrito': 
-      console.log('Cart page');
-      break;
+      return root.appendChild(pages.store())
+    case '#/carrito': 
+      return root.appendChild(pages.cart())
     default:
-      console.log('404 - Pagina no encontrada')
-      break;
+      return root.appendChild(pages.notFound())
   }
 }
 
