@@ -1,13 +1,10 @@
-// importaciones css de bootstrap optimizadas, vienen de un archivo .scss modificado
-import "./sass/main.scss";
 // importaciones js de bootstrap optimizadas
-import { Collapse } from "bootstrap";
-
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 // Utils
-import { getHashAndParams } from './utils'
+import { getHashAndParams } from './utils.js'
 
 // Routers
-import Router from './router/index.routes'
+import Router from './router/index.routes.js'
 
 const routerFlow = (event) => {
   const {hash, params} = getHashAndParams(location);

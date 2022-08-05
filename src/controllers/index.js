@@ -1,7 +1,7 @@
-import Home from "./index.controller";
-import Store from "./store.controller";
-import Cart from "./cart.controller";
-import NotFound from "./notfound.controller";
+import Home from "./index.controller.js";
+import Store from "./store.controller.js";
+import Cart from "./cart.controller.js";
+import NotFound from "./notfound.controller.js";
 
 const pages = {
   home: Home,
