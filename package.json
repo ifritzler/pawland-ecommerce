@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack"
+    "start": "webpack serve --mode development"
   },
   "keywords": [],
   "author": "Fritzler Ilan Emanuel",

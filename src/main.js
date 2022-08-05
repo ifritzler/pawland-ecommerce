@@ -1,8 +1,7 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+// importaciones css de bootstrap optimizadas, vienen de un archivo .scss modificado
 import "./sass/main.scss";
-
-import "bootstrap/js/dist/dropdown";
-import "bootstrap/js/dist/collapse";
+// importaciones js de bootstrap optimizadas
+import { Collapse } from "bootstrap";
 
 // Utils
 import { getHashAndParams } from './utils'
