@@ -6,10 +6,10 @@ import { getHashAndParams } from './utils.js'
 // Routers
 import Router from './router/index.routes.js'
 
-const routerFlow = (event) => {
+const routerFlow = () => {
   const {hash, params} = getHashAndParams(location);
   Router({hash, params});
 }
 
-window.addEventListener("popstate", (event) => routerFlow(event));
-window.addEventListener("DOMContentLoaded", (event) => routerFlow(event));
+window.addEventListener("popstate", routerFlow);
+window.addEventListener("DOMContentLoaded", routerFlow);
