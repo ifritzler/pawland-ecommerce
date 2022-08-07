@@ -22,8 +22,10 @@ const router = ({ hash: route, params }) => {
       break;
     }
     case "#/carrito":
+      root.innerHTML = "";
       return root.appendChild(pages.cart());
     default:
+      root.innerHTML = "";
       return root.appendChild(pages.notFound());
   }
 };
