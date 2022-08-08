@@ -16,5 +16,13 @@ const getProducts = async () => {
   return products;
 };
 
-export default getProducts;
+const getProductById = async (id) => {
+  const products = await getProducts()
+  const product = products.filter(p => p.id === Number(id))
+  return product[0] || null
+}
+
+export {
+  getProducts, getProductById
+}
 

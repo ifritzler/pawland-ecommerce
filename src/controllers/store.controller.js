@@ -1,7 +1,8 @@
 import view from "../views/store.js";
-import getProducts from "../services/products.js";
+import {getProducts, getProductById} from "../services/products.js";
 import filterProducts from "../services/filterProducts.js";
 import { createCardProduct } from "../components/storeCardProduct.js";
+import { addProduct } from "../services/basket.js";
 
 export default async ({ category: categories, priceFilterObject = {} }) => {
   const fragment = document.createElement("div");
@@ -14,10 +15,15 @@ export default async ({ category: categories, priceFilterObject = {} }) => {
 
   let cards = "";
   products.forEach((product) => {
-    const { id, title, categories, price, img, description } = product;
     cards += createCardProduct(product);
   });
 
   listProducts.innerHTML = cards;
+  const buttons = listProducts.querySelectorAll('button')
+  Array.from(buttons).forEach(btn => {
+    btn.addEventListener('click', async function() {
+      addProduct(await getProductById(Number(btn.dataset.id)))
+    })
+  })
   return fragment;
 };

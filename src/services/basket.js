@@ -1,3 +1,5 @@
+import { showToastNotification } from "../utils.js";
+
 // Inicializacion del carrito
 let basket = {};
 function basketInit() {
@@ -30,7 +32,7 @@ function getTotalBasket(cart) {
 }
 
 function addProduct(product) {
-  const carrito = getCartCopy();
+  const carrito = getBasketCopy();
   const { id, img, title, price } = product;
   if (carrito.hasOwnProperty(product.id)) {
     carrito[id].quantity = Number(carrito[id].quantity) + 1;
@@ -45,6 +47,7 @@ function addProduct(product) {
     };
   }
   updateBasket(carrito);
+  showToastNotification({title})
 };
 
 // Se encarga de renderizar el objeto del carrito

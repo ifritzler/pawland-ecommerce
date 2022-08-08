@@ -1,3 +1,22 @@
+const showToastNotification = ({ title }, callback = null) => {
+  Toastify({
+    text: `${title} fue agregado!`,
+    duration: 3000,
+    destination: "#/carrito",
+    newWindow: false,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "rgba(255, 208, 0, 1)",
+      color: "rgba(24, 24, 24, 1)",
+      fontSize: "16px",
+    },
+    onClick: callback ? callback : null, // Callback after click
+  }).showToast();
+};
+
 /**
  * Esta funcion es un controlador que maneja la obtencion del hash y los params si existiesen.
  * Permite mayor flexibilidad a la hora de hablar de una SPA realizada con vanilla js.
@@ -62,4 +81,4 @@ const getLoader = () => {
   return loader;
 };
 
-export { getHashAndParams, getLoader };
+export { getHashAndParams, getLoader, showToastNotification };

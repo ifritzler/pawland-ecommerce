@@ -14,5 +14,8 @@
     "bootstrap": "^5.2.0",
     "reload": "^3.2.0",
     "sass": "^1.54.3"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
   }
 }
