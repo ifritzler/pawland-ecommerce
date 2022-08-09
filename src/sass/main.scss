@@ -1,3 +1,5 @@
+
+
 // Configuration
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -44,5 +46,12 @@
 // Utilities
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
+
 @import 'base';
+@import 'utils/mixins';
+@import 'utils/colors';
+@import 'utils/media';
+@import 'components/cards';
+// @import 'utils/utils';
 @import 'components/main';
+@import './layout/hero';
