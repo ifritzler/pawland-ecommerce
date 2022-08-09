@@ -7785,8 +7785,18 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   font-size: 1.6rem;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-img-top {
@@ -7950,6 +7960,78 @@ html {
     order: 1;
     width: 100%;
     max-height: 80vh;
+  }
+}
+
+.footer {
+  background-color: rgb(255, 208, 0);
+  padding: 4rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: no-wrap;
+  gap: none;
+}
+@media only screen and (max-width: 760px) {
+  .footer {
+    padding: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .footer {
+    padding: 1.3rem;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  gap: 1.5rem;
+  font-weight: 700;
+}
+
+#formularioRegistro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
+  gap: 1.5rem;
+}
+#formularioRegistro label {
+  font-weight: 700;
+  min-width: 24ch;
+  max-width: 45ch;
+}
+#formularioRegistro input {
+  width: 90%;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.6rem;
+  border: none;
+  color: rgba(24, 24, 24, 0.9);
+}
+#formularioRegistro input:focus {
+  outline: 1px solid rgba(24, 24, 24, 0.7);
+}
+@media only screen and (max-width: 760px) {
+  #formularioRegistro label {
+    font-size: 1.5rem;
+  }
+  #formularioRegistro input {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #formularioRegistro label {
+    font-size: 1.3rem;
   }
 }
 

@@ -16,6 +16,7 @@
     "sass": "^1.54.3"
   },
   "dependencies": {
+    "nodemon": "^2.0.19",
     "toastify-js": "^1.12.0"
   }
 }

@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pawland - Tu mascoteria Favorita</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./src/styles.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-md">
@@ -75,7 +79,42 @@
     </nav>
     <!--  MAIN CONTENT -->
     <main id="root" class=""></main>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <footer class="footer">
+      <nav>
+        <ul class="footer__links">
+          <li>
+            <a class="link" href="#/tienda">
+              <p>Tienda</p>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="#/nosotros">
+              <p>Nosotros</p>
+            </a>
+          </li>
+          <li>
+            <a class="link" href="#/historia">
+              <p>Nuestra Historia</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <form id="formularioRegistro">
+        <label for="email">
+          Registra tu email y accede a un codigo de descuento para tu primera
+          compra!
+        </label>
+        <input type="email" name="email" id="email" />
+        <button class="btn--dark" type="submit">Enviar</button>
+      </form>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="./src/main.js" type="module"></script>
   </body>
 </html>

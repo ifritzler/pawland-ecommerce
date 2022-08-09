@@ -2,6 +2,16 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   font-size: 1.6rem;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
 }
