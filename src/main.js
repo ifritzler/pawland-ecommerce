@@ -1,5 +1,5 @@
 // importaciones js de bootstrap optimizadas
-import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+
 // Utils
 import { getHashAndParams } from './utils.js'
 // Basket imports
