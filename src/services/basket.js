@@ -8,7 +8,13 @@ function basketInit() {
     localStorage.setItem("cart", JSON.stringify({}));
   }
   basket = {...JSON.parse(cartString)};
-  console.log(basket)
+}
+
+function deleteItem(id){
+  basketInit()
+  const basketCopy = getBasketCopy();
+  delete basketCopy[id];
+  updateBasket(basketCopy);
 }
 
 // Facilita la lectura de codigo, se encarga de obtener una copia exacta del carrito
@@ -39,6 +45,7 @@ function addProduct(product) {
     carrito[id].total = carrito[id].quantity * carrito[id].price;
   } else {
     carrito[id] = {
+      id,
       img,
       title,
       price,
@@ -50,14 +57,10 @@ function addProduct(product) {
   showToastNotification({title})
 };
 
-// Se encarga de renderizar el objeto del carrito
-function renderBasket() {
-  console.log(basket)
-}
-
 export {
   basketInit, 
   getBasketCopy,
   addProduct,
-  getTotalBasket
+  getTotalBasket,
+  deleteItem
 }

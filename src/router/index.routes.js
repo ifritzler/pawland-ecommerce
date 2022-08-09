@@ -23,23 +23,26 @@ const router = ({ hash: route, params }) => {
       break;
     }
     case "#/carrito": {
-      root.innerHTML = "";
-      root.appendChild(pages.cart());
-      renderBasketResume();
-      const form = document.querySelector("#form-add-discount");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const discountCode = e.target.querySelector('input').value
-        if(discountCode !== ""){
-          renderBasketResume(discountCode)
-        }
-      });
-      return;
+      return startBasketPage(root);
     }
     default:
       root.innerHTML = "";
       return root.appendChild(pages.notFound());
   }
 };
+
+function startBasketPage(rootElement) {
+  rootElement.innerHTML = "";
+  rootElement.appendChild(pages.cart());
+  renderBasketResume();
+  const form = document.querySelector("#form-add-discount");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const discountCode = e.target.querySelector("input").value;
+    if (discountCode !== "") {
+      renderBasketResume(discountCode);
+    }
+  });
+}
 
 export default router;

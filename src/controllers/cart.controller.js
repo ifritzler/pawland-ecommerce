@@ -1,5 +1,5 @@
 import { basketItemCard } from "../components/basketItemCard.js";
-import { getBasketCopy, getTotalBasket } from "../services/basket.js";
+import { deleteItem, getBasketCopy, getTotalBasket } from "../services/basket.js";
 import view from "../views/cart.js";
 import { resume } from "../views/cart.js";
 
@@ -12,7 +12,6 @@ export const renderBasketResume = (discountCode) => {
   const divElement = document.createElement("div");
   divElement.innerHTML = resume();
   const resumeBasketElement = document.querySelector("#resume-basket");
-  console.log(resumeBasketElement)
   const basketSubTotal = divElement.querySelector("#basket-subtotal");
   const basketDiscount = divElement.querySelector("#basket-discount");
   const basketTotal = divElement.querySelector("#basket-total");
@@ -36,7 +35,9 @@ export const renderBasketResume = (discountCode) => {
 
 const renderBasket = () => {
   const divElement = document.createElement("div");
-  divElement.innerHTML = view();
+  const title = `<span class="badge bg-primary">Productos</span>`
+  divElement.innerHTML += title;
+  divElement.innerHTML += view();
   const basketContainer = divElement.querySelector("#baket-items-container");
   const cart = getBasketCopy();
   let innerHtml = "";
@@ -46,16 +47,26 @@ const renderBasket = () => {
   });
 
   basketContainer.innerHTML = innerHtml;
+  Array.from(basketContainer.querySelectorAll('button')).forEach(button => {
+    button.addEventListener('click', (e) => {
+      const id = e.target.dataset.id;
+      console.log(e.target)
+      const container = document.getElementById('baket-items-container');
+      deleteItem(id)
+      container.innerHTML = ""
+      container.appendChild(renderBasket())
+    })
+  })
+
 
   return divElement;
 };
 
 const Cart = () => {
   const divElement = document.createElement("div");
+  divElement.classList.add('row')
   divElement.appendChild(renderBasket())
   return divElement
 }
 
 export default Cart;
-
-

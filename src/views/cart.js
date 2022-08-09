@@ -39,7 +39,6 @@ export default () => {
   const html = `
   <div class="d-flex flex-row flex-column flex-md-row justify-content-center gap-3">
     <div>
-      <span class="badge bg-primary">Productos</span>
       <div class ="d-flex flex-column">
         <div class="flex-grow-1" id="baket-items-container"></div>
       </div>
