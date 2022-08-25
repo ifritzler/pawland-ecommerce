@@ -1,11 +1,20 @@
-### Configuracion a la hora de usar Webpack
+### Ecommerce
+## Final Javascript project - Coderhouse
 
-- Tener instalada la ultima version LTS de nodejs(Recomendado)
-Instalar webpack
-  
-Usar el siguiente comando 
-```
-npm i --save-dev webpack
-```
-- Generar el archivo webpack.config.js en la raiz del proyecto. Este archivo sirve para que webpack sepa lo que debe hacer.
-- Le indicamos en el mismo archivo cual es el archivo de entrada y cual el de salida.
+![The San Juan Mountains are beautiful!](pawland-home.png "Pawland Home")
+
+
+This ecommerce was made with:
+ - Vanilla Javascript
+ - Toastify JS
+ - Node (enviroment)
+ - Pure CSS
+ - Responsive Design
+ - Componentization in Vanilla JS
+ 
+This project gave me a 10 calification in my javascript course in Coderhouse.
+
+[Go to my certification - Spanish](https://www.coderhouse.com/certificados/630291c90b8bf304192cb3ac)
+
+[Go to my certification - English](https://www.coderhouse.com/certificados/630291c90b8bf304192cb3ac?lang=en)
+ 
